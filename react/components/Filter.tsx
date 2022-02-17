@@ -3,6 +3,13 @@ import { Coordinates } from './WrapperContentForm'
 // @ts-ignore
 import { EXPERIMENTAL_Select as Select } from 'vtex.styleguide'
 import { Store } from '../types/stores'
+import {useCssHandles} from 'vtex.css-handles'
+import './index.css'
+
+const HANDLES = [
+    'filter',
+    'filter__title'
+]
 interface FilterProps {
     setMap: Dispatch<SetStateAction<Coordinates>>
     stores: Store[]
@@ -10,7 +17,8 @@ interface FilterProps {
 
 const Filter:FC<FilterProps> = ({stores, setMap}) => {
     const [city, setCity] = useState('')
-    
+    const {handles} = useCssHandles(HANDLES)
+
     const storesUniq = [...new Set(stores.map(option=>option.city))]
     let options:{value:string,label:string}[] = storesUniq.map((city)=>{
         return {
@@ -30,7 +38,8 @@ const Filter:FC<FilterProps> = ({stores, setMap}) => {
     }
 
     return (
-        <div>
+        <div className={`${handles.filter}`}>
+            <h3 className={`${handles.filter__title}`}>Filtrar por:</h3>
             <Select
                 placeholder="Seleccionar..."
                 label="Ciudad"

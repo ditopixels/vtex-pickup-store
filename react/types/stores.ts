@@ -1,8 +1,7 @@
 export interface Store {
+    id: number,
     name: string,
-    address: string,
-    scheduleWeek: string,
-    scheduleWeekend: string,
+    content: string,
     lng: number,
     lat: number,
     city: string

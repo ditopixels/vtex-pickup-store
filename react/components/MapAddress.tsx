@@ -19,7 +19,6 @@ const MapAddress:FC<Props> = ({coordinateMap,markers,google}) => {
         width: '100%',
         height: '473px'
     }
-    console.log(MarkerImage)
     return (
         <Map
             containerStyle={containerStyle}
@@ -32,11 +31,10 @@ const MapAddress:FC<Props> = ({coordinateMap,markers,google}) => {
                     key={index}
                     // @ts-ignore
                     position={marker.position}
-                    // @ts-ignore
                     icon={{
                         url: MarkerImage,
-                        anchor: new google.maps.Point(23,43),
-                        scaledSize: new google.maps.Size(31,61)
+                        anchor: new google.maps.Point(26,43),
+                        scaledSize: new google.maps.Size(26,43)
                     }}
                 />
             ))}

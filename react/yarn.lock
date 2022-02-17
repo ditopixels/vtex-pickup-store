@@ -1716,6 +1716,10 @@ ajv@^6.12.3:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+"alfagresalfa.address-with-google-maps@https://stores--alfagresalfa.myvtex.com/_v/private/typings/linked/v1/alfagresalfa.address-with-google-maps@0.1.0+build1645123129/public/@types/alfagresalfa.address-with-google-maps":
+  version "0.1.0"
+  resolved "https://stores--alfagresalfa.myvtex.com/_v/private/typings/linked/v1/alfagresalfa.address-with-google-maps@0.1.0+build1645123129/public/@types/alfagresalfa.address-with-google-maps#ae75e1d40f477c2177a8080296b8aa3cb9ca5f12"
+
 ansi-escapes@^4.2.1:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
@@ -5252,6 +5256,10 @@ verror@1.10.0:
   version "2.12.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.carousel@2.12.1/public/@types/vtex.carousel#f99139a9d22227fa239192a058defd13f8cc50be"
 
+"vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles":
+  version "1.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles#336b23ef3a9bcb2b809529ba736783acd405d081"
+
 "vtex.flex-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.19.0/public/@types/vtex.flex-layout":
   version "0.19.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.19.0/public/@types/vtex.flex-layout#042e0e1770bafdd157705abefffe0b2645a98f84"
@@ -5272,9 +5280,9 @@ verror@1.10.0:
   version "2.34.5"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.menu@2.34.5/public/@types/vtex.menu#1314120b59bf04b958f8e5095b57dcc9c3ed189f"
 
-"vtex.minicart@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.minicart@2.63.1/public/@types/vtex.minicart":
-  version "2.63.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.minicart@2.63.1/public/@types/vtex.minicart#8ebd02093190e6be3ba01c2fb652533497dd7f18"
+"vtex.minicart@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.minicart@2.63.2/public/@types/vtex.minicart":
+  version "2.63.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.minicart@2.63.2/public/@types/vtex.minicart#7ea9e6c74f1fd5397e2510de1929ed9f05d9cf16"
 
 "vtex.my-account@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.25.0/public/@types/vtex.my-account":
   version "1.25.0"
