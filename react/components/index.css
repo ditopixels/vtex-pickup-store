@@ -1,0 +1,8 @@
+.wrapperContainer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    padding: 60px 3.125vw;
+    width: 100%;
+    max-width: 1920px;
+}
