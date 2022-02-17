@@ -1,6 +1,7 @@
 import React, {FC} from 'react'
 import {Map, Marker} from 'google-maps-react';
 import { Coordinates } from './WrapperContentForm';
+import MarkerImage from '../assets/Pointer.svg'
 
 export type MarkerType = {
     position: Coordinates
@@ -18,6 +19,7 @@ const MapAddress:FC<Props> = ({coordinateMap,markers,google}) => {
         width: '100%',
         height: '473px'
     }
+    console.log(MarkerImage)
     return (
         <Map
             containerStyle={containerStyle}
@@ -32,9 +34,9 @@ const MapAddress:FC<Props> = ({coordinateMap,markers,google}) => {
                     position={marker.position}
                     // @ts-ignore
                     icon={{
-                        url: "/path/to/custom_icon.png",
-                        anchor: new google.maps.Point(32,32),
-                        scaledSize: new google.maps.Size(64,64)
+                        url: MarkerImage,
+                        anchor: new google.maps.Point(23,43),
+                        scaledSize: new google.maps.Size(31,61)
                     }}
                 />
             ))}
