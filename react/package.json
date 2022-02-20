@@ -27,6 +27,7 @@
     "@types/react": "^16.9.31",
     "@types/react-content-loader": "3",
     "@types/react-dom": "^16.9.0",
+    "@types/react-places-autocomplete": "^7.2.9",
     "@vtex/test-tools": "^3.3.2",
     "@vtex/tsconfig": "^0.4.4",
     "alfagresalfa.address-with-google-maps": "https://stores--alfagresalfa.myvtex.com/_v/private/typings/linked/v1/alfagresalfa.address-with-google-maps@0.1.0+build1645123129/public/@types/alfagresalfa.address-with-google-maps",

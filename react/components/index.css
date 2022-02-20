@@ -45,6 +45,7 @@
 }
 
 .filter button{
+    cursor: pointer;
     width: 128px;
     height: 35px;
     border-radius: 17px;
@@ -68,7 +69,8 @@
     display: flex;
     grid-column: span 2;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 5%;
     row-gap: 30px;
     padding-top: 20px;
 }
@@ -97,6 +99,8 @@
 }
 .list > .list__item >div{
     width: 100%;
+}
+.list > .list__item >div>div{
     padding-right: 32px;
 }
 .list__header{
@@ -107,10 +111,155 @@
 
 }
 
+.select{
+    height: 73px;
+    width: 100%;
+    position: relative;
+}
+.select [class*="control"]{
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+.select [class*="control"]>div{
+    align-items: flex-end;
+}
+.select [class*="control"]>div>span{
+    margin-bottom: 3px;
+}
+.select [class*="menu"]{
+    position: relative;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+    border-color: red;
+}
+.select [class*="container"]{
+    border-radius: 17px;
+    border: 1px solid #ff6000;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+}
+.select > div {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.list__stores{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+    padding: 0px 35px 20px;
+}
+.list__stores::before{
+    content: "";
+    display: flex;
+    width: 105%;
+    height: 1px;
+    background-color: #ff6000;
+    grid-column: span 3;
+    justify-self: center;
+}
+.store__message{
+    color: #525252;
+    font-family: "Josefin Sans";
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28px;
+    text-align: left;
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.store__message::after{
+    content: "";
+    width: 5%;
+    height: 1px;
+    background-color: #ff6000;
+}
+.store__item span{
+    color: #ff6000;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28px;
+    text-align: left;
+}
+
+.store__item div{
+    color: #525252;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 22px;
+    text-align: left;
+}
+
+.store__item a{
+    text-decoration: none;
+    width: 142px;
+    height: 28px;
+    background-color: #30c2f2;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
 @media screen and (max-width: 1024px) {
     .wrapperContainer{
         display: flex;
         padding: 30px 20px;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+    .list > .list__item{
+        width: 100%;
+    }
+    .list__stores{
+        display: flex;
+        flex-direction: column;
+    }
+    .filter{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin-bottom: 40px;
+        gap: 10px;
+    }
+    .filter__title{
+        grid-column: span 2;
+    }
+    .filter button{
+        align-self: flex-end;
+        height: 40px;
+    }
+    .message{
+        padding-bottom: 50px;
+        text-align: left;
+    }
+    .wrapperContainer > :nth-child(2){
+        width: calc(100% - 120px) !important;
+        margin: 0 auto;
     }
 }

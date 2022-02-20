@@ -1,0 +1,12 @@
+query getStores{
+  documents(
+    acronym:"TI"
+    fields:[ "city", "lng", "lat", "content", "name"]
+    pageSize: 46
+  ) @context(provider: "vtex.store-graphql"){
+    fields{
+      key
+      value
+    }
+  }
+}

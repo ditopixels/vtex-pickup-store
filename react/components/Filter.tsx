@@ -5,10 +5,15 @@ import { EXPERIMENTAL_Select as Select } from 'vtex.styleguide'
 import { Store } from '../types/stores'
 import {useCssHandles} from 'vtex.css-handles'
 import './index.css'
+import {
+    geocodeByAddress,
+    getLatLng,
+} from 'react-places-autocomplete'
 
 const HANDLES = [
     'filter',
-    'filter__title'
+    'filter__title',
+    'select'
 ]
 interface FilterProps {
     setMap: Dispatch<SetStateAction<Coordinates>>
@@ -27,27 +32,26 @@ const Filter:FC<FilterProps> = ({stores, setMap}) => {
         }
     })
 
-    const handleSubmitCity:MouseEventHandler<HTMLButtonElement> = () => {
-        const storeNear:(Store | undefined) = stores.find(store=>store.city===city) 
-        if(storeNear){
-            setMap({
-                lat:storeNear.lat,
-                lng:storeNear.lng
-            })
-        }
+    const handleSubmitCity:MouseEventHandler<HTMLButtonElement> = async () => {
+        const results = await geocodeByAddress(`Colombia ${city}`)
+        const latLng = await getLatLng(results[0])
+        
+        if(latLng) setMap({...latLng, city})
     }
 
     return (
         <div className={`${handles.filter}`}>
             <h3 className={`${handles.filter__title}`}>Filtrar por:</h3>
-            <Select
-                placeholder="Seleccionar..."
-                label="Ciudad"
-                onChange={(values:any)=>setCity(values.value)}
-                clearable={false}
-                multi={false}
-                options={options}
-            />
+            <div className={handles.select}>
+                <Select
+                    placeholder="Seleccionar..."
+                    label="Ciudad"
+                    onChange={(values:any)=>setCity(values.value)}
+                    clearable={false}
+                    multi={false}
+                    options={options}
+                />
+            </div>
             <button onClick={handleSubmitCity}>Buscar</button>
         </div>
     )
